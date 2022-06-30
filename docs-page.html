@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>LlamaBot - Discord Bot</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Probably the world's best llama-related discord bot!">
+    <meta name="author" content="LarryTLlama">    
+    <link rel="shortcut icon" href="llama.png"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="llama.png" style="height: 50px;" alt="logo"><span class="logo-text">Llama<span class="text-alt">Bot</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search for commands..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Add to Discord</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search for commands..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Adding and setting Permissions</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Advanced permission setting</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Section Item 2.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-horse"></i></span>Commands: Llama</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#llama">/llama</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#llamafact">/llamafact</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#llamarate">/llamarate</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#spit">/spit</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#minecraft">/minecraft</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#pat">/pat</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-dollar"></i></span>Commands: Economy</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#shop">/shop</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#buy">/buy</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#inv">/inv</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#pay">/pay</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#lb">/lb</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#slots">/slots</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#daily">/daily</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#safari">/safari</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Commands: Utility</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#dice">/dice</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#coinflip">/coinflip</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#invite">/invite</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#links">/links</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#ping">/ping</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#time">/time</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Commands: Other</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#java">/java</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#bedrock">/bedrock</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#radiolist">/radiolist</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#stop">/stop</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Privacy FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Other FAQs</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 29th June 2022</span></h1>
+					    <section class="docs-intro">
+						    <p>Hey there! Welcome to the LlamaBot docs and info site!
+							LlamaBot is a reactive discord bot that does llama related stuff (plus a lot more!)
+							No donator only, or voter only commands. Everyone gets the same access to LB!</p>
+						</section><!--//docs-intro-->
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Section Item 1.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. </p>
+						<p>Code Example: <code>npm install &lt;package&gt;</code></p>
+						<h5>Unordered List Examples:</h5>
+						<ul>
+						    <li><strong class="me-1">HTML5:</strong> <code>&lt;div id="foo"&gt;</code></li>
+						    <li><strong class="me-1">CSS:</strong> <code>#foo { color: red }</code></li>
+						    <li><strong class="me-1">JavaScript:</strong> <code>console.log(&#x27;#foo\bar&#x27;);</code></li>
+						</ul>
+						<h5>Ordered List Examples:</h5>
+						<ol>
+							<li>Download lorem ipsum dolor sit amet.</li>
+							<li>Click ipsum faucibus venenatis.</li>
+							<li>Configure fermentum malesuada nunc.</li>
+							<li>Deploy donec non ante libero.</li>
+						</ol>
+                        <h5>Callout Examples:</h5>
+                        <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <code>&lt;code&gt;</code> , Nemo enim ipsam voluptatem quia voluptas <a href="#">link example</a> sit aspernatur aut odit aut fugit.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+                        
+                        <div class="callout-block callout-block-warning">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-bullhorn"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor <a href="#">link example</a> tellus vel diam viverra elementum.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+                        
+                        <div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                Tip
+	                            </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Link example</a> aenean commodo ligula eget dolor.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+                        
+                        <div class="callout-block callout-block-danger me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                Danger
+	                            </h4>
+                                <p>Morbi eget interdum sapien. Donec sed turpis sed nulla lacinia accumsan vitae ut tellus. Aenean vestibulum <a href="#">Link example</a> maximus ipsum vel dignissim. Morbi ornare elit sit amet massa feugiat, viverra dictum ipsum pellentesque. </p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+                        
+                        <h5 class="mt-5">Alert Examples:</h5>
+                        <div class="alert alert-primary" role="alert">
+						  This is a primary alert—check it out!
+						</div>
+						<div class="alert alert-secondary" role="alert">
+						  This is a secondary alert—check it out!
+						</div>
+						<div class="alert alert-success" role="alert">
+						  This is a success alert—check it out!
+						</div>
+						<div class="alert alert-danger" role="alert">
+						  This is a danger alert—check it out!
+						</div>
+						<div class="alert alert-warning" role="alert">
+						  This is a warning alert—check it out!
+						</div>
+						<div class="alert alert-info" role="alert">
+						  This is a info alert—check it out!
+						</div>
+						<div class="alert alert-light" role="alert">
+						  This is a light alert—check it out!
+						</div>
+						<div class="alert alert-dark" role="alert">
+						  This is a dark alert—check it out!
+						</div>
+                        
+                       
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Section Item 1.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h5 class="mt-5">Lightbox Example:</h5>
+						
+						<p>The example below uses the <i class="fas fa-external-link-alt"></i> <a class="theme-link" href="https://github.com/andreknieriem/simplelightbox" target="_blank">simplelightbox plugin</a>. </p>
+						
+						<div class="simplelightbox-gallery row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+						        <a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+							</div>
+							<div class="col-12 col-md-4 mb-3">
+						        <a href="assets/images/coderpro-features.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-features-thumb.png" alt="" title="CoderPro Features Page"/></a>
+							</div><!--//col-->
+							<div class="col-12 col-md-4 mb-3">
+						        <a href="assets/images/coderpro-pricing.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-pricing-thumb.png" alt="" title="CoderPro Pricing Page"/></a>
+							</div><!--//col-->
+							
+						</div><!--//gallery-->
+						
+						<h5>Custom Table:</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered">
+								<tbody>
+								    <tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#">Option 1</a></th>
+									    <td>Option 1 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
+									</tr>
+									<tr>
+									      <th class="theme-bg-light"><a class="theme-link" href="#">Option 2</a></th>
+									      <td>Option 2 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
+									</tr>
+									
+									<tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#">Option 3</a></th>
+									    <td>Option 3 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
+									</tr>
+									
+									<tr>
+									    <th class="theme-bg-light"><a class="theme-link" href="#">Option 4</a></th>
+									    <td>Option 4 desc lorem ipsum dolor sit amet, consectetur adipiscing elit. </td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+						<h5>Stripped Table:</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+						<h5>Bordered Dark Table:</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered table-dark">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+						
+						
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Section Item 1.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h5>Badges Examples:</h5>
+						<div class="my-4">
+						    <span class="badge badge-primary">Primary</span>
+							<span class="badge badge-secondary">Secondary</span>
+							<span class="badge badge-success">Success</span>
+							<span class="badge badge-danger">Danger</span>
+							<span class="badge badge-warning">Warning</span>
+							<span class="badge badge-info">Info</span>
+							<span class="badge badge-light">Light</span>
+							<span class="badge badge-dark">Dark</span>
+						</div>
+						<h5>Button Examples:</h5>
+						<div class="row my-3">
+                        <div class="col-md-6 col-12">
+                                <ul class="list list-unstyled pl-0">
+                                    <li><a href="#" class="btn btn-primary">Primary Button</a></li>
+                                    <li><a href="#" class="btn btn-secondary">Secondary Button</a></li>
+                                    <li><a href="#" class="btn btn-light">Light Button</a></li>
+                                    <li><a href="#" class="btn btn-success">Succcess Button</a></li>
+                                    <li><a href="#" class="btn btn-info">Info Button</a></li>
+                                    <li><a href="#" class="btn btn-warning">Warning Button</a></li>
+                                    <li><a href="#" class="btn btn-danger">Danger Button</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <ul class="list list-unstyled pl-0">
+                                    <li><a href="#" class="btn btn-primary"><i class="fas fa-download me-2"></i> Download Now</a></li>
+                                    <li><a href="#" class="btn btn-secondary"><i class="fas fa-book me-2"></i> View Docs</a></li>
+                                    <li><a href="#" class="btn btn-light"><i class="fas fa-arrow-alt-circle-right me-2"></i> View Features</a></li>
+                                    <li><a href="#" class="btn btn-success"><i class="fas fa-code-branch me-2"></i> Fork Now</a></li>
+                                    <li><a href="#" class="btn btn-info"><i class="fas fa-play-circle me-2"></i> Find Out Now</a></li>
+                                    <li><a href="#" class="btn btn-warning"><i class="fas fa-bug me-2"></i> Report Bugs</a></li>
+                                    <li><a href="#" class="btn btn-danger"><i class="fas fa-exclamation-circle me-2"></i> Submit Issues</a></li>
+                                </ul>
+                            </div>
+                        </div><!--//row-->
+                        
+                        <h5>Progress Examples:</h5>
+                        <div class="my-4">
+	                        <div class="progress my-4">
+								<div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="progress my-4">
+							    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="progress my-4">
+							    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<div class="progress my-4">
+							    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+                        </div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Section Item 1.4</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						
+						
+						<h5>Pagination Example:</h5>
+						<nav aria-label="Page navigation example">
+						    <ul class="pagination pl-0">
+							    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+							    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+						    </ul>
+						</nav>
+						
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						
+					</section><!--//section-->
+					
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+						    <p>LlamaBot is super easy to install into your server. Give it a couple clicks and you'll have it installed!</p>
+							<div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>This guide assumes you have no knowledge of adding discord bots to your server. Setup is same as usual, so skip this bit if you already know how it all works <i class="fa-solid fa-face-smile"></i></p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Adding and setting permissions</h2>
+						<p>Adding is quite simple, and easy to do.
+						1. Click the Add to Discord button at the top right of this page
+						2. Sign into discord
+						3. Set all the permissions you wish to keep/remove</p>
+						<!--//Warning bit-->
+						<div class="callout-block callout-block-warning">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-bullhorn"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>We reccomend that you keep the permissions as the pre-set suggests, as turning some off might stop the bot from working properly.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">More specific bot permissions</h2>
+						<p>Once LlamaBot is added, Discord provides a much richer setup for LlamaBot permissions
+						To access these settings, head to: <code>&lt;Server Settings > Integrations > LlamaBot&gt;</code>.
+						
+						From here, you're able to customize who can use which command, and in what channel! </p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Commands List: Llama</h1>
+					    <section class="docs-intro">
+						    <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Previous prefixes (lb. and ?) are now depreciated due to Discord's message privacy movement. You can now use fancy slash commands by typing / followed by the command name and arguments.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="llama">
+						<h2 class="section-heading">Llama</h2>
+						<p>Posts a Llama GIF in chat</p>
+						<p>Usage: <code>/llama</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="llamafact">
+						<h2 class="section-heading">Llamafact</h2>
+						<p>Posts a random fact about llamas in chat!</p>
+						<p>Usage: <code>/llamafact</code>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="llamarate">
+						<h2 class="section-heading">Llamarate</h2>
+						<p>Rate a person, based on how much they like llamas</p>
+						<p>Usage: <code>/rate [user]</code>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="spit">
+						<h2 class="section-heading">Spit</h2>
+						<p>Its something that llamas do! Spit on another user</p>
+						<p>Usage: <code>/spit [user]</code>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="minecraft">
+						<h2 class="section-heading">Minecraft</h2>
+						<p>Get more info on llama stuff, from the popular video game Minecraft</p>
+						<p>Usage: <code>/minecraft</code>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="pat">
+						<h2 class="section-heading">Pat</h2>
+						<p>(Try to) pat someone on the head!</p>
+						<p>Usage: <code>/pat [user]</code>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Commands List: Economy</h1>
+					    <section class="docs-intro">
+						    <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Previous prefixes (lb. and ?) are now depreciated due to Discord's message privacy movement. You can now use fancy slash commands by typing / followed by the command name and arguments.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="bal">
+						<h2 class="section-heading">Balance</h2>
+						<p>Get a user's balance</p>
+						<p>Usage: <code>/bal [user]</code></p>
+						
+						<div class="alert alert-info" role="alert">
+						  <strong>Note:</strong> The User argument is required :)
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="shop">
+						<h2 class="section-heading">Shop</h2>
+						<p>Displays the shop of items that you can buy!</p>
+						<p>Usage: <code>/shop</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="buy">
+						<h2 class="section-heading">Buy</h2>
+						<p>Buy an item listed in the shop</p>
+						<p>Usage: <code>/buy [item]</code></p>
+						
+						<div class="alert alert-info" role="alert">
+						  <strong>Note:</strong> The "Item" list can be found using /shop
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="inv">
+						<h2 class="section-heading">Inventory</h2>
+						<p>Displays what you've bought/collected!</p>
+						<p>Usage: <code>/inv [user]</code></p>
+						
+						<div class="alert alert-info" role="alert">
+						  <strong>Note:</strong> The "User" argument is required :)
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="pay">
+						<h2 class="section-heading">Pay</h2>
+						<p>Pay a fellow Llama/Person some money!</p>
+						<p>Usage: <code>/pay [user] [amount]</code></p>
+						
+						<div class="alert alert-info" role="alert">
+						  <strong>Note:</strong> The "User" and "Amount" arguments are required :)
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="lb">
+						<h2 class="section-heading">Leaderboard</h2>
+						<p>View the leaderboard</p>
+						<p>Usage: <code>/lb</code></p>
+						
+						<div class="alert alert-success" role="alert">
+						  The leaderboard displayed is <strong>Global</strong> and updates every time you earn stuff. Neat!
+						</div>
+						<div class="alert alert-warning" role="alert">
+						  The leaderboard does not display you until you've sent a message. That means if the bot restarts or updates, you'll have to send a message to make you appear again! Sorry for any inconvenience D:
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="slots">
+						<h2 class="section-heading">Slots</h2>
+						<p>Play against the slot machine and win (or lose) money.</p>
+						<p>Usage: <code>/slots</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="daily">
+						<h2 class="section-heading">Daily</h2>
+						<p>Get your daily dose of money.</p>
+						<p>Usage: <code>/daily</code></p>
+						<div class="alert alert-success" role="alert">
+						  You get 500 WheatCoin per day, on us! Cool, right?
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="safari">
+						<h2 class="section-heading">Safari</h2>
+						<p>Go on Safari, and count how many llamas you see</p>
+						<p>Usage: <code>/safari</code></p>
+						<div class="alert alert-danger" role="alert">
+						  This is known to be a bit problematic on slower networks. Make sure to have a decent connection before playing :)
+						</div>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Command List: Utility</h1>
+					    <section class="docs-intro">
+						    <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Previous prefixes (lb. and ?) are now depreciated due to Discord's message privacy movement. You can now use fancy slash commands by typing / followed by the command name and arguments.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="dice">
+						<h2 class="section-heading">Dice</h2>
+						<p>Roll a dice, and get a result!</p>
+						<p>Usage: <code>/dice</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="coinflip">
+						<h2 class="section-heading">Coinflip</h2>
+						<p>Flip a coin and get Heads or Tails</p>
+						<p>Usage: <code>/coinflip</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="invite">
+							<h2 class="section-heading">Invite</h2>
+						<p>Share the bot's invite link with your friends :D</p>
+						<p>Usage: <code>/invite</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="links">
+							<h2 class="section-heading">Links</h2>
+						<p>Get a list of useful links</p>
+						<p>Usage: <code>/links</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="ping">
+							<h2 class="section-heading">Ping</h2>
+						<p>Standard ping command, showing LB's ping, and the Discord API Ping</p>
+						<p>Usage: <code>/ping</code></p>
+					</section><!--//section-->
+					
+					
+					<section class="docs-section" id="time">
+							<h2 class="section-heading">Time</h2>
+							<div class="callout-block callout-block-danger">
+                            <div class="content">
+							<h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                Danger
+	                            </h4>
+                                <p>This command is kinda broken, and I don't know how to fix it. I'll keep trying, but in the meantime, it might throw unexpected things such as errors and results such as: 'NaN'. Use at your own risk!</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Get a discord unix timestamp so your friends across timezones see the correct time</p>
+						<p>Usage: <code>/time [timezone]</code></p>
+						<p>Then, a modal will pop up asking for the timestamp details - All fields are required!</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+		        <article class="docs-article" id="section-6">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Commands List: Other</h1>
+					    <section class="docs-intro">
+						    <div class="callout-block callout-block-info">
+                            
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Previous prefixes (lb. and ?) are now depreciated due to Discord's message privacy movement. You can now use fancy slash commands by typing / followed by the command name and arguments.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="java">
+						<h2 class="section-heading">Java Stats</h2>
+                                
+						<p>Fetches information from a <strong>Java</strong> Minecraft server.</p>
+						<p>Usage: <code>/java [IP] [Port]</code></p>
+						<div class="alert alert-info" role="alert">
+						  The port argument is commonly not placed, so if you don't put in a port usually, stick in "25565" here; the standard port for java.
+						</div>
+						<div class="alert alert-info" role="alert">
+						  All arguments are required here :D
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="bedrock">
+						<h2 class="section-heading">Bedrock Stats</h2>
+						<p>Fetches information from a <strong>Bedrock</strong> Minecraft server.</p>
+						<p>Usage: <code>/bedrock [IP] [Port]</code></p>
+						<div class="alert alert-info" role="alert">
+						  All arguments are required here :D
+						</div>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="radiolist">
+							<h2 class="section-heading">Radiolist</h2>
+							<div class="callout-block callout-block-warning me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>The /radio command mentioned in the radio list is now depreciated due to its End-Of-Service. Sorry!</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Gets a list of radio stations and their commands</p>
+						<p>Usage: <code>/radiolist</code></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="stop">
+							<h2 class="section-heading">Stop</h2>
+							<div class="callout-block callout-block-warning me-1">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder">
+		                                <i class="fas fa-exclamation-triangle"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>This command won't work unless you're in the voice channel with the bot!</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+						<p>Stop's the bot's playback in Voice Chat</p>
+						<p>Usage: <code>/stop</code></p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-7">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">FAQs</h1>
+					    <section class="docs-intro">
+						    <p>Instead of asking loads of questions to me, why not test the website, and see if we've got your answer!</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Privacy FAQ's</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What information is stored about me?</h5>
+						<p>The LlamaBot database is quite small in size. We track the following:<br>
+						- Your user name (Used in display, when you run commands)<br>
+						- How many messages you've sent (which we use to add coins to your balance)<br>
+						- Your user id (Used to link your user name and balance)<br>
+						<br>
+						We don't store:<br>
+						- Passwords<br>
+						- Server (Guild) names/info<br>
+						- Other information about you<br>
+						</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Who can view these details?</h5>
+						<p>Your user name and balance can be publicly viewed on the leaderboard by anyone.<br>
+						Other than this, no one can view your information but the bot developer and you.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Other various FAQs</h2>
+						<p>Now that our boring privacy notice is out of the way, lets look at more exciting topics! Yay!</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>LlamaBot isn't working for me. Can I check this is not just my fault?</h5>
+						<p>Yes! You can check out our <a href="https://llamabot-statuspage.glitch.me">statuspage</a> to see if the bot is offline, and why it might be!<br>
+						Note that we use a free-host to run it though, so it may take some time to load it up :D</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I request new features and games to be added?</h5>
+						<p>Absolutely! Join our discord updates server or just hit me with a DM! (LarryTLlama#8588) </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Are llamas and alpacas different?</h5>
+						<p>Yes, they are! Read about them <a href="https://letmegooglethat.com/?q=Llama+and+Alpaca+differences&l=1">here!</a></p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Your website didn't answer my question. Answer it for me!!!</h5>
+						<p>Well, firstly that isn't a "question", but you can join our discord updates server and I'll respond ASAP!</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+			     <footer class="footer">
+
+	    <div class="footer-bottom text-center py-5">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Thanks to <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for providing this great template! </small><br>
+			<small class="copyright"><a href="https://discord.gg/TQ7CB9MyhT">LlamaBot Updates Discord</a> • <a href="https://llamabot-statuspage.glitch.me">LlamaBot Statuspage [Beta]</a> • <a href="https://sites.google.com/view/llamabot">Old Site</a>
+            
+	        
+	    </div>
+	    
+    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script>
+	<script src="assets/dark-mode-switch.min.js"></script>	
+
+</body>
+</html> 
+

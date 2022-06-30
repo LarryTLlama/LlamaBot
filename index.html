@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>LlamaBot - Discord Bot</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Probably the world's best Llama-Related discord bot!">
+    <meta name="author" content="LarryTLlama">    
+    <link rel="shortcut icon" href="llama.png"> 
+    
+	<style>
+	#myUL {
+  /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li {
+display: none;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  z-index: 999999999999999999999;
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+	</style>
+	
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body>    
+    <header class="header fixed-top">	 
+	       
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" style="height: 50px;" src="llama.png" alt="logo"><span class="logo-text">Llama<span class="text-alt">Bot</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+		                <li class="list-inline-item"><a href="https://discord.gg/TQ7CB9MyhT"><i class="fa-brands fa-discord"></i></a></li>
+		                <li class="list-inline-item"><a href="https://llamabot-statuspage.glitch.me"><i class="fa-solid fa-chart-column"></i></a></li>
+		            </ul><!--//social-list-->
+		            <a href="https://discord.com/oauth2/authorize?client_id=833284850969739284&permissions=429500262720&scope=bot%20applications.commands" class="btn btn-primary d-none d-lg-flex">Add to Discord</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="page-header theme-bg-dark py-5 text-center position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h1 class="page-heading single-col-max mx-auto">LlamaBot</h1>
+		    <div class="page-intro single-col-max mx-auto">Probably the world's best Llama-Related Discord Bot</div>
+		    <div class="main-search-box pt-3 d-block mx-auto">
+                 <form class="search-form w-100">
+		            <input type="text" onkeyup="myFunction()" placeholder="Search for commands..." name="search" class="form-control search-input" id="searchBar">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+					
+					<ul id="myUL">
+				<li><a href="docs-page.html#llama">Llama</a></li>
+				<li><a href="docs-page.html#llamafact">LlamaFact</a></li>
+				<li><a href="docs-page.html#rate">Rate</a></li>
+				<li><a href="docs-page.html#spit">Spit</a></li>
+				<li><a href="docs-page.html#minecraft">Minecraft</a></li>
+				<li><a href="docs-page.html#pat">Pat</a></li>
+				<li><a href="docs-page.html#bal">Bal</a></li>
+				<li><a href="docs-page.html#shop">Shop</a></li>
+				<li><a href="docs-page.html#buy">Buy</a></li>
+				<li><a href="docs-page.html#inv">Inv</a></li>
+				<li><a href="docs-page.html#pay">Pay</a></li>
+				<li><a href="docs-page.html#lb">Lb</a></li>
+				<li><a href="docs-page.html#slots">Slots</a></li>
+				<li><a href="docs-page.html#daily">Daily</a></li>
+				<li><a href="docs-page.html#safari">Safari</a></li>
+				<li><a href="docs-page.html#dice">Dice</a></li>
+				<li><a href="docs-page.html#coinflip">Coinflip</a></li>
+				<li><a href="docs-page.html#invite">Invite</a></li>
+				<li><a href="docs-page.html#links">Links</a></li>
+				<li><a href="docs-page.html#ping">Ping</a></li>
+				<li><a href="docs-page.html#time">time</a></li>
+				<li><a href="docs-page.html#java">Java</a></li>
+				<li><a href="docs-page.html#bedrock">Bedrock</a></li>
+				<li><a href="docs-page.html#radiolist">Radiolist</a></li>
+				<li><a href="docs-page.html#stop">Stop</a></li>
+				</ul>
+		        </form>
+				
+             </div>
+	    </div>
+    </div><!--//page-header-->
+   <div class="page-content">
+	    <div class="container">
+		    <div class="docs-overview py-5">
+			    <div class="row justify-content-center">
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-map-signs"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Introduction</span>
+							    </h5>
+							    <div class="card-text">
+								    Welcome to the world of LlamaBot! Learn what we're all about here!
+							    </div>
+							    <a class="card-link-mask" href="docs-page.html#section-1"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-arrow-down"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Installation</span>
+							    </h5>
+							    <div class="card-text">
+								    How to add LlamaBot into your server for beginners who've never used bots before
+							    </div>
+							    <a class="card-link-mask" href="docs-page.html#section-2"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fa-solid fa-horse"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Llama Commands</span>
+							    </h5>
+							    <div class="card-text">
+								    Command list, info and usage of the Llama Commands section					    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-3"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fa-solid fa-dollar"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Economy Commands</span>
+							    </h5>
+							    <div class="card-text">
+								    Main economy commands, for use in buying, selling, etc.						    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-4"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-tools"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Utilities</span>
+							    </h5>
+							    <div class="card-text">
+									The useful commands list is here! Full usage on cool commands, such as dice and coinflip.
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-5"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4 py-3">
+					    <div class="card shadow-sm">
+						    <div class="card-body">
+							    <h5 class="card-title mb-3">
+								    <span class="theme-icon-holder card-icon-holder me-2">
+								        <i class="fas fa-laptop-code"></i>
+							        </span><!--//card-icon-holder-->
+							        <span class="card-title-text">Other Commands</span>
+							    </h5>
+							    <div class="card-text">
+								    Various other commands are displayed here					    
+								</div>
+							    <a class="card-link-mask" href="docs-page.html#section-6"></a>
+						    </div><!--//card-body-->
+					    </div><!--//card-->
+				    </div><!--//col-->
+			    </div><!--//row-->
+		    </div><!--//container-->
+		</div><!--//container-->
+    </div><!--//page-content-->
+
+    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
+	    <div class="theme-bg-shapes-right"></div>
+	    <div class="theme-bg-shapes-left"></div>
+	    <div class="container">
+		    <h3 class="mb-2 text-white mb-3">Add more llamas into your discord server!</h3>
+		    <div class="section-intro text-white mb-3 single-col-max mx-auto">Get our free bot, with no donate/voter-only access commands, available right now!</div>
+		    <div class="pt-3 text-center">
+			    <a class="btn btn-light" href="https://discord.com/oauth2/authorize?client_id=833284850969739284&permissions=429500262720&scope=bot%20applications.commands">Get LlamaBot <i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
+		    </div>
+	    </div>
+    </section><!--//cta-section-->
+
+    <footer class="footer">
+
+	    <div class="footer-bottom text-center py-5">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Thanks to <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for providing this great template! </small><br>
+			<small class="copyright"><a href="https://discord.gg/TQ7CB9MyhT">LlamaBot Updates Discord</a> • <a href="https://llamabot-statuspage.glitch.me">LlamaBot Statuspage [Beta]</a> • <a href="https://sites.google.com/view/llamabot">Old Site</a>
+            
+	        
+	    </div>
+	    
+    </footer>
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+	<!--<script src="assets/filter.js"></script>-->
+	<script>
+	function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('searchBar');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+  console.log(filter)
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+	if(filter.length < 2) {
+	return li[i].style.display = "none";
+	}
+	
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].setAttribute("style", "display: block;");
+	  console.log('Shown')
+    } else {
+      li[i].style.display = "none";
+	  console.log('Hidden')
+    }
+  }
+}
+
+window.onload = myFunction()
+	</script>
+
+</body>
+</html> 
+
